@@ -3,7 +3,7 @@ import Header from "./components/Header/header";
 import Layout from "./components/Layout/layout";
 import Footer from "./components/Footer/footer";
 
-import layoutBG from ".//shared-assets/bg.jpg";
+import layoutBG from "./shared-assets/bg.jpg";
 
 console.log(layoutBG);
 
