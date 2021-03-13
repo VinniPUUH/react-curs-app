@@ -1,17 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Header/header";
+import Layout from "./components/Layout/layout";
+import Footer from "./components/Footer/footer";
 
-function App() {
+import layoutBG from ".//shared-assets/bg.jpg";
+
+console.log(layoutBG);
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello!
-        </p>
-      </header>
-    </div>
+    <>
+      <Header title="Мой проект" desc="На react.js" />
+      <Layout title="Первый заголовок" desc="Здесь наверное что-то будет" urlBg={layoutBG} />
+      <Layout title="Второй заголовок" desc="Здесь наверное что-то будет" colorBg="#fb6666db" />
+      <Layout title="Третий заголовок" desc="Здесь наверное что-то будет" urlBg={layoutBG} />
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
