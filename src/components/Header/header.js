@@ -1,7 +1,5 @@
 import s from "./style.module.css"
 
-console.log(s)
-
 const Header = ({title, desc}) => {
   return (
     <header className={s.root}>
