@@ -1,23 +1,53 @@
 import cx from "classnames";
+import { Link } from "react-router-dom";
+
 import s from "./style.module.css";
 
-const Menu = () => {
+const Menu = ({ onMenuClick }) => {
   return (
-    <div class={cx(s.menuContainer, s.active)}>
-      <div class={s.overlay} />
-      <div class={s.menuItems}>
+    <div className={cx(s.menuContainer, s.active)}>
+      <div className={s.overlay} />
+      <div className={s.menuItems}>
         <ul>
           <li>
-            <a href="#welcome">HOME</a>
+            <Link
+              to="/"
+              onClick={() => {
+                onMenuClick();
+              }}
+            >
+              HOME
+            </Link>
           </li>
           <li>
-            <a href="#game">GAME</a>
+            <Link
+              to="/game"
+              onClick={() => {
+                onMenuClick();
+              }}
+            >
+              GAME
+            </Link>
           </li>
           <li>
-            <a href="#about">ABOUT</a>
+            <Link
+              to="/about"
+              onClick={() => {
+                onMenuClick();
+              }}
+            >
+              ABOUT
+            </Link>
           </li>
           <li>
-            <a href="#contact">CONTACT</a>
+            <Link
+              to="/contact"
+              onClick={() => {
+                onMenuClick();
+              }}
+            >
+              CONTACT
+            </Link>
           </li>
         </ul>
       </div>

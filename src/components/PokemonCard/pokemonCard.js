@@ -4,10 +4,9 @@ import s from "./style.module.css";
 
 import backImage from "./img/card-back-side.jpg";
 
-const PokemonCard = ({ id, name, type, img, values }) => {
-  const [isActive, setActive] = useState(false);
+const PokemonCard = ({ id, name, type, img, values, isActive, pokemonCardRotate }) => {
 
-  const pokemonClickHandler = () => {setActive(!isActive)};
+  const pokemonClickHandler = () => {pokemonCardRotate(id)};
 
   return (
     <div className={s.root}>
