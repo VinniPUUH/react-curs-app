@@ -2,13 +2,13 @@ import { setState } from "react";
 import cx from "classnames";
 import s from "./style.module.css";
 
-const NavBar = ({ onMenuClick, menuOpened }) => {
+const NavBar = ({ onMenuClick, menuOpened, bgActive }) => {
   return (
-    <nav class={s.root}>
-      <div class={s.navWrapper}>
-        <p class={s.brand}>LOGO</p>
+    <nav className={(cx(s.root, {[s.bgActive]: bgActive }))}>
+      <div className={s.navWrapper}>
+        <p className={s.brand}>LOGO</p>
         <a
-          class={cx(s.menuButton, { [s.active]: menuOpened })}
+          className={cx(s.menuButton, { [s.active]: menuOpened })}
           onClick={() => onMenuClick()}
         >
           <span />
