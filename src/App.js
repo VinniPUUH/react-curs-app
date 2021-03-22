@@ -1,11 +1,12 @@
 import { useState } from "react";
 import {
   useRouteMatch,
-  BrowserRouter,
   Route,
   Switch,
   Redirect,
 } from "react-router-dom";
+import cx from "classnames";
+
 import HomePage from "./routes/Home/home";
 import GamePage from "./routes/Game/game";
 import AboutPage from "./routes/About/about";
@@ -13,11 +14,11 @@ import ContactPage from "./routes/Contact/contact";
 import NotFoundPage from "./routes/NotFound/notFound";
 import MenuHeader from "./components/MenuHeader/menuHeader";
 import Footer from "./components/Footer/footer";
-import cx from "classnames";
+
 
 import s from "./style.module.css";
 
-const POKEMONS = [
+/* const POKEMONS = [
   {
     abilities: ["keen-eye", "tangled-feet", "big-pecks"],
     stats: {
@@ -138,7 +139,7 @@ const POKEMONS = [
       left: 4,
     },
   },
-];
+]; */
 
 const App = () => {
   const match = useRouteMatch("/");
@@ -153,7 +154,7 @@ const App = () => {
               <Route path="/" exact component={HomePage} />
               <Route
                 path="/game"
-                render={() => <GamePage pokemons={POKEMONS} />}
+                render={() => <GamePage/>}
               />
               <Route path="/about" component={AboutPage} />
               <Route path="/contact" component={ContactPage} />
